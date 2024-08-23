@@ -1,0 +1,19 @@
+{
+	"name": "data-fetcher",
+	"version": "1.0.0",
+	"main": "script.ts",
+	"scripts": {
+		"start": "nodemon -e ts --exec 'bun run .'"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@types/node": "^22.5.0",
+		"axios": "^1.7.4",
+		"cheerio": "^1.0.0",
+		"fs": "^0.0.1-security",
+		"slug": "^9.1.0"
+	}
+}
