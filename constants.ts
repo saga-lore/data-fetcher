@@ -2,7 +2,7 @@ export default {
   "kunmanga": {
     "URL": "https://kunmanga.com/manga/{manga}",
     "PATTERN": /https:\/\/(?:kunmanga\.com\/manga\/(?<manga>[^\/]+)(?:\/(?<chapter>[^\/]*))?\/?)\/?$/,
-    "PAGINATE": "https://azoramoon.com/page/{page}",
+    "PAGINATE": "https://kunmanga.com/page/{page}",
     "TITLE": "body > div.wrap > div > div > div > div.profile-manga.summary-layout-1 > div > div > div > div.post-title > h1",
     "CHAPTERS": "body > div.wrap > div > div > div > div.c-page-content.style-1 > div > div > div > div > div > div.c-page > div > div.page-content-listing.single-page > div > ul",
     "IMAGES": "body > div.wrap > div > div > div > div > div > div > div > div > div.c-blog-post > div.entry-content > div > div > div.reading-content",

@@ -1,0 +1,81 @@
+{
+  "source": "kunmanga",
+  "title": "Beyond Redemption",
+  "chapters": [
+    {
+      "source": "kunmanga",
+      "id": "chapter-3",
+      "mangaTitle": "Beyond Redemption",
+      "url": "https://kunmanga.com/manga/beyond-redemption/chapter-3/",
+      "images": [
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/76edecf88a5a298424910db2aece8778/02.jpg",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/76edecf88a5a298424910db2aece8778/03.jpg",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/76edecf88a5a298424910db2aece8778/04.jpg",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/76edecf88a5a298424910db2aece8778/05.jpg",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/76edecf88a5a298424910db2aece8778/06.jpg",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/76edecf88a5a298424910db2aece8778/07.jpg",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/76edecf88a5a298424910db2aece8778/08.jpg",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/76edecf88a5a298424910db2aece8778/09.jpg",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/76edecf88a5a298424910db2aece8778/10.jpg",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/76edecf88a5a298424910db2aece8778/11.jpg",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/76edecf88a5a298424910db2aece8778/12.jpg"
+      ]
+    },
+    {
+      "source": "kunmanga",
+      "id": "chapter-2",
+      "mangaTitle": "Beyond Redemption",
+      "url": "https://kunmanga.com/manga/beyond-redemption/chapter-2/",
+      "images": [
+        "https://img-4.harimanga.com/beyond-redemption/chapter-2/001.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-2/002.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-2/003.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-2/004.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-2/005.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-2/006.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-2/007.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-2/008.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-2/009.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-2/010.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-2/011.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-2/012.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-2/013.webp"
+      ]
+    },
+    {
+      "source": "kunmanga",
+      "id": "chapter-1",
+      "mangaTitle": "Beyond Redemption",
+      "url": "https://kunmanga.com/manga/beyond-redemption/chapter-1/",
+      "images": [
+        "https://img-4.harimanga.com/beyond-redemption/chapter-1/001.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-1/002.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-1/003.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-1/004.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-1/005.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-1/006.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-1/007.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-1/008.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-1/009.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-1/010.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-1/011.webp",
+        "https://img-4.harimanga.com/beyond-redemption/chapter-1/012.webp"
+      ]
+    },
+    {
+      "source": "kunmanga",
+      "id": "chapter-0",
+      "mangaTitle": "Beyond Redemption",
+      "url": "https://kunmanga.com/manga/beyond-redemption/chapter-0/",
+      "images": [
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/85de43f4f58cf3555d110925b2f41406/1.webp",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/85de43f4f58cf3555d110925b2f41406/2.webp",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/85de43f4f58cf3555d110925b2f41406/3.webp",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/85de43f4f58cf3555d110925b2f41406/4.webp",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/85de43f4f58cf3555d110925b2f41406/5.webp",
+        "https://img-2.harimanga.com/manga_66c4ab54a6ca8/85de43f4f58cf3555d110925b2f41406/6.webp"
+      ]
+    }
+  ],
+  "fetchImages": true
+}
