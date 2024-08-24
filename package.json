@@ -3,7 +3,8 @@
 	"version": "1.0.0",
 	"main": "script.ts",
 	"scripts": {
-		"start": "nodemon -e ts --exec 'bun run .'"
+		"start": "nodemon -e ts --exec 'bun run .'",
+		"dev": "nodemon -e ts --exec 'bun run .'"
 	},
 	"keywords": [],
 	"author": "",

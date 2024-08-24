@@ -1,17 +1,14 @@
-import axios from 'axios';
 import Manga from './Manga';
-import * as cheerio from 'cheerio';
-import constants from './constants';
 
-const MANGA_URL = "https://azoramoon.com/series/youth-lovesome";
+const MANGA_URL = "https://kunmanga.com/manga/weapon-maker/";
 
-const manga = (await new Manga({ url: MANGA_URL, fetchImages: true }).fetch())?.save();
-const pages = 1;
-const genre = "اكشن";
-const mangas: Manga[] = [];
+const manga = (await new Manga({ source: "kunmanga", title: "Solo Leveling", fetchImages: true }).fetch())?.save();
 
-// console.log(manga)
+console.log(manga)
 
+// const pages = 1;
+// const genre = "اكشن";
+// const mangas: Manga[] = [];
 // for (let i = 1; i <= pages; i++) {
 //   const response = await axios.get(constants.PAGINATE.replace("{page}", i + ""));
 //   const $ = cheerio.load(response.data);
@@ -22,7 +19,7 @@ const mangas: Manga[] = [];
 //     if (mangaUrl) {
 //       var mangaSlug = mangaUrl.split("/")[4];
 //       var manga: Manga | null = new Manga({
-//         url: constants.URL_REPLACER
+//         url: constants.PATTERN
 //           .replace("{manga}", mangaSlug),
 //         fetchImages: true
 //       });
@@ -35,4 +32,4 @@ const mangas: Manga[] = [];
 //   }
 // }
 
-console.log(`Found ${mangas.length} mangas`);
+// console.log(`Found ${mangas.length} mangas`);

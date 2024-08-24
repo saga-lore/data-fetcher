@@ -5,32 +5,35 @@ import constants from './constants';
 import Chapter from './Chapter';
 import fs from 'fs';
 import path from 'path';
+import { Source } from './Types';
 
 export default class Manga {
+  source: Source;
   url?: string;
   title?: string;
   chapters: Chapter[] = [];
   private fetchImages: boolean = false;
 
-  constructor({ title, url, fetchImages = true }: { title?: string, url?: string, fetchImages?: boolean }) {
+  constructor({ source, title, url, fetchImages = true }: { source: Source, title?: string, url?: string, fetchImages?: boolean }) {
+    this.source = source;
     this.title = title;
     this.url = url;
     this.fetchImages = fetchImages;
   }
 
-  getUrl = () => this.url ?? constants.URL_REPLACER.replace("{manga}", this.getSlug());
+  getUrl = () => this.url ?? constants[this.source].URL.replace("{manga}", this.getSlug());
 
   fetch = async (): Promise<Manga | null> => {
     const timeStarted = Date.now();
     const response = await axios.get(this.getUrl())
     const $ = cheerio.load(response.data);
-    this.title = $(constants.TITLE).text().trim();
-    const chapters = $(constants.CHAPTERS).find('li');
+    this.title = $(constants[this.source].TITLE).text().trim();
+    const chapters = $(constants[this.source].CHAPTERS).find('li');
     for (let i = 0; i < chapters.length; i++) {
       const chapterUrl = $(chapters[i]).find('a').attr('href')?.trim();
-      const chapterId = $(chapters[i]).find('a').text().trim();
+      const chapterId = chapterUrl?.match(constants[this.source].PATTERN)?.groups?.chapter ?? '';
       if (chapterUrl) {
-        var chapter = new Chapter({ url: chapterUrl, id: chapterId, mangaTitle: this.title ?? '' });
+        var chapter = new Chapter({ source: this.source, url: chapterUrl, id: chapterId, mangaTitle: this.title ?? '' });
         if (this.fetchImages) chapter = await chapter.fetch();
         this.chapters.push(chapter);
       }
@@ -41,12 +44,13 @@ export default class Manga {
   }
 
   save = (): Manga => {
-    fs.writeFileSync(path.join(process.cwd(), `/data/${this.getSlug()}.json`), JSON.stringify(this, null, 2));
+    if (!fs.existsSync(path.join(process.cwd(), '/data'))) fs.mkdirSync(path.join(process.cwd(), '/data'));
+    if (!fs.existsSync(path.join(process.cwd(), `/data/${this.source}`))) fs.mkdirSync(path.join(process.cwd(), `/data/${this.source}`));
+    fs.writeFileSync(path.join(process.cwd(), `/data/${this.source}/${this.getSlug()}.json`), JSON.stringify(this, null, 2));
     return this;
   }
 
   getSlug = () => {
-    return this.title ? slug(this.title, { lower: true }) : this.url?.replace(constants.URL_REPLACER.split("{manga}")[0], "")
-      .replace(constants.URL_REPLACER.split("{manga}")[1], "").replace("/", "");
+    return this.title ? slug(this.title, { lower: true }) : this.url?.match(constants[this.source].PATTERN)?.groups?.manga ?? '';
   }
 }
