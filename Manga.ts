@@ -46,7 +46,9 @@ export default class Manga {
   save = (): Manga => {
     if (!fs.existsSync(path.join(process.cwd(), '/data'))) fs.mkdirSync(path.join(process.cwd(), '/data'));
     if (!fs.existsSync(path.join(process.cwd(), `/data/${this.source}`))) fs.mkdirSync(path.join(process.cwd(), `/data/${this.source}`));
-    fs.writeFileSync(path.join(process.cwd(), `/data/${this.source}/${this.getSlug()}.json`), JSON.stringify(this, null, 2));
+    setTimeout(() => { // for image probe to finish
+      fs.writeFileSync(path.join(process.cwd(), `/data/${this.source}/${this.getSlug()}.json`), JSON.stringify(this, null, 2));
+    }, 100);
     return this;
   }
 
